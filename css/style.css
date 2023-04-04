@@ -94,14 +94,33 @@ img {
 .menu-item {
   padding-top: 20px;
   padding-bottom: 20px;
+  
+}
+
+.menu-link::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border: 1px;
+  border-radius: 2px;
+  background-color: var(--OCEAN);
+  opacity: 0;
+}
+.menu-link:hover::after {
+  opacity: 1;
 }
 
 .menu-link {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--NAVY-BLUE);
+  padding-bottom: 26px;
 }
 
 .menu-link:hover,
@@ -579,6 +598,10 @@ img {
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
+}
+
+.partfolio-cards::before {
+
 }
 
 /* =================== /PARTFOLIO =================== */
